@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const cors = require("cors");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
@@ -6,7 +7,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express();
 //!Middlewares
 const corsOptions = {
-  origin: ["http://localhost:5174", "http://localhost:5173"],
+  origin: "https://geminicontentgenerator.netlify.app",
 };
 app.use(cors(corsOptions));
 app.use(express.json());
